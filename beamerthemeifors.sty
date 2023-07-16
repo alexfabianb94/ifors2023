@@ -1,0 +1,140 @@
+\mode<presentation>
+
+\setbeamertemplate{frametitle}[default][right]
+
+\setbeamerfont{title}{series=\bfseries}
+\setbeamerfont{author}{size=\footnotesize}
+\setbeamerfont{institute}{size=\footnotesize}
+\setbeamerfont{date}{size=\footnotesize}
+
+\definecolor{darkblue}{RGB}{13, 67, 162}
+\definecolor{lightblue}{RGB}{132, 173, 245}
+\definecolor{crimson}{RGB}{153, 35, 35}
+\definecolor{navyblue}{RGB}{11, 58, 141}
+\definecolor{gray1}{RGB}{38, 38, 38}
+\definecolor{gray2}{RGB}{64, 64, 64}
+
+\defbeamertemplate*{title page}{ifors}[1][]
+{
+  \begingroup
+    \centering
+    \vskip18pt
+    \begin{beamercolorbox}[wd=.6\paperwidth,left]{title}
+      \usebeamerfont{title}\inserttitle\par 
+    \end{beamercolorbox}
+    \vskip12pt
+    \begin{beamercolorbox}[wd=.6\paperwidth,left]{author}
+      \usebeamerfont{author}\insertauthor\par
+    \end{beamercolorbox}
+    \vskip12pt
+    \begin{beamercolorbox}[wd=.6\paperwidth,left]{institute}
+      \usebeamerfont{institute}\insertinstitute\par
+    \end{beamercolorbox}
+    \vskip3pt
+    \begin{beamercolorbox}[wd=.6\paperwidth,left]{date}
+      \usebeamerfont{date}\insertdate
+    \end{beamercolorbox}
+  \endgroup
+}
+
+\setbeamertemplate{background}{
+  \ifnum\thepage=1
+  \begin{tikzpicture}
+  \filldraw[white, thick] (0,0) -- (0,9) -- (16,9) -- (16,0);
+  \draw[gray2, thick] (1,4.5) -- (5.5,4.5);
+  \node[] at (2,1.5) {
+    \includegraphics[width=.15\paperwidth]{template/ifors2023-logo.png}
+  };
+  \node[] at (2,0.5) {
+    \includegraphics[width=.18\paperwidth]{template/ifors-logo.png}
+  };
+  \node[] at (4.5,0.8) {
+    \includegraphics[width=.1\paperwidth]{template/ichio-logo.png}
+  };
+  \node[] at (6.5,0.8) {
+    \includegraphics[width=.104\paperwidth]{template/alio-logo.jpg}
+  };
+  \node[] at (8,0.8) {
+    \includegraphics[width=.0625\paperwidth]{template/uchile-logo.jpg}
+  };
+  \node[] at (9.5,0.8) {
+    \includegraphics[width=.08\paperwidth]{template/puc-logo.png}
+  };
+  \node[] at (11.3,0.8) {
+    \includegraphics[width=.106\paperwidth]{template/isci-logo.png}
+  };
+  \node[] at (14.35,4) {
+    \includegraphics[width=.208\paperwidth]{template/front-image.jpg}
+  };
+  \filldraw[crimson, thick] (0,8) -- (0,9) -- (16,9) -- (16,8);
+  \node[text=white] at (8,8.5) {
+    ADVANCED ANALYTICS FOR A BETTER WORLD
+  };
+  \end{tikzpicture}
+  \else
+      \ifnum\thepage=31
+      \begin{tikzpicture}
+      \filldraw[white, thick] (0,0) -- (0,9) -- (16,9) -- (16,0);
+      \node[] at (8,2.75) {
+        \includegraphics[width=.15\paperwidth]{template/ifors2023-logo.png}
+      };
+      \node[] at (4.5,0.8) {
+        \includegraphics[width=.1\paperwidth]{template/ichio-logo.png}
+      };
+      \node[] at (6.5,0.8) {
+        \includegraphics[width=.104\paperwidth]{template/alio-logo.jpg}
+      };
+      \node[] at (8,0.8) {
+        \includegraphics[width=.0625\paperwidth]{template/uchile-logo.jpg}
+      };
+      \node[] at (9.5,0.8) {
+        \includegraphics[width=.08\paperwidth]{template/puc-logo.png}
+      };
+      \node[] at (11.3,0.8) {
+        \includegraphics[width=.106\paperwidth]{template/isci-logo.png}
+      };
+      \node[] at (7.98,6.075) {
+        \makebox[\textwidth]{\includegraphics[width=\paperwidth]{template/banner-end.jpg}}
+      };
+      \filldraw[crimson, thick] (0,8) -- (0,9) -- (16,9) -- (16,8);
+      \node[text=white] at (8,8.5) {
+        ADVANCED ANALYTICS FOR A BETTER WORLD
+      };
+      \end{tikzpicture}
+      \else
+      \begin{tikzpicture}
+      \filldraw[darkblue, thick] (0,9) -- (0,6.75) -- (1.75,9);
+      \filldraw[crimson, thick] (16,0) -- (16,2.25) -- (14.25,0);
+      \end{tikzpicture}
+      \fi
+  \fi
+}
+
+\setbeamertemplate{items}[circle]
+\setbeamertemplate{sections/subsections in toc}[circle]
+
+\setbeamercolor{alerted text}{fg=navyblue}
+\setbeamercolor*{p1}{fg=white}
+\setbeamercolor*{p2}{fg=black,bg=lightblue}
+\setbeamercolor*{p3}{fg=white, bg=darkblue}
+\setbeamercolor*{p4}{fg=blue,bg=crimson}
+\setbeamercolor*{pt}{fg=black}
+
+\setbeamercolor{title}{fg=gray1}
+\setbeamercolor{author}{fg=gray1}
+\setbeamercolor{institute}{fg=gray1}
+\setbeamercolor{date}{fg=gray1}
+
+\setbeamertemplate{blocks}[default]
+\setbeamercolor{block title}{fg=crimson}
+\setbeamercolor{block body}{bg=}
+\setbeamercolor{frametitle}{fg=white,bg=darkblue}
+
+\setbeamercolor{item}{fg=crimson} 
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+
+\setbeamercolor{footline}{fg=white}
+
+\mode<all>
